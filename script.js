@@ -1,6 +1,6 @@
 const container = document.querySelector("#container");
 const maxCells = 256;
-let cells;
+let allCells = makeCells();
 
 function makeCells() {
     for (let i = 0; i < maxCells; i++) {
@@ -10,4 +10,9 @@ function makeCells() {
     }
 }
 
-let allCells = makeCells();
+function hoverEffect(e) {
+    const hover = e.target;
+    hover.classList.add("hover");
+}
+
+container.addEventListener("mouseover", hoverEffect);
