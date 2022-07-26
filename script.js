@@ -1,6 +1,11 @@
 const container = document.querySelector("#container");
-const maxCells = 256;
+const button = document.querySelector("button");
+let maxCells = 256;
 let allCells = makeCells();
+let grid = 16;
+container.style.gridTemplateColumns = `repeat(${grid}, 1fr`;
+//container.style.gridTemplateRows = `repeat(${grid}, 1fr`;
+
 
 function makeCells() {
     for (let i = 0; i < maxCells; i++) {
@@ -16,3 +21,12 @@ function hoverEffect(e) {
 }
 
 container.addEventListener("mouseover", hoverEffect);
+
+button.addEventListener("click", function(e) {
+    grid = parseInt(prompt("Enter a number of squares: "));
+    container.style.gridTemplateColumns = `repeat(${grid}, 1fr`;
+    container.style.gridTemplateRows = `repeat(${grid}, 1fr`;
+    maxCells = grid * grid;
+    console.log(maxCells);
+    makeCells();
+});

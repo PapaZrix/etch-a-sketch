@@ -5,6 +5,17 @@ body {
     align-items: center;
 }
 
+.wrapper {
+    flex: 1;
+}
+
+.ratio {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #container {
     width: 399px;
     height: 399px;
@@ -14,7 +25,7 @@ body {
     row-gap: 1px;
     column-gap: 1px;
     /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
-    grid-template-columns: repeat(16, 1fr); /* Isto kao ovo gore*/
+    /*grid-template-columns: repeat(16, 1fr); /* Isto kao ovo gore*/
     background-color: white;
 }
 
@@ -27,3 +38,4 @@ body {
 .hover {
     background-color: black;
 }
+
