@@ -9,9 +9,19 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
     <div class="wrapper">
-        <div class="ratio">
-            <button class="ratio">GRID SIZE</button>
+        <div class="tools">
+            <div class="ratio">
+                <input type="range" value="16" max="64" class="range">
+                <p class="num"></p>
+                <button class="toggle active">Toggle Grid Lines</button>
+            </div>
+            <div class="clear-erase">
+                <button class="clear">Clear</button>
+            </div>
         </div>
         <div id="container"></div>
     </div>
